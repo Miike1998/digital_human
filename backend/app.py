@@ -1,11 +1,15 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 from speech_to_text import transcribe_audio
 from text_to_speech import synthesize_speech
 from chat_ai import generate_reply
 
-app = Flask(__name__)
-CORS(app)  # maakt frontend-requests mogelijk
+app = Flask(__name__, static_folder="static", template_folder="frontend")
+CORS(app)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
 
 @app.route("/api/chat", methods=["POST"])
 def chat():
