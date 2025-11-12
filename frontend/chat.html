@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <title>Digital Human - Chat</title>
@@ -7,10 +7,11 @@
 </head>
 <body>
   <div id="container">
-    <h1 id="profileName"></h1>
+    <h1 id="title"></h1>
     <div id="avatar">
       <img src="" alt="Digital Human" id="avatarImage">
     </div>
+    <p id="context"></p>
     <button id="recordButton">🎤 Start gesprek</button>
     <p id="transcript"></p>
     <audio id="replyAudio" controls></audio>
@@ -18,11 +19,11 @@
 
   <script src="script.js"></script>
   <script>
-    // Haal geselecteerd profiel op
     const profile = localStorage.getItem("selectedProfile") || "Avatar1";
-    document.getElementById("profileName").textContent = profile;
+    const location = localStorage.getItem("selectedLocation") || "Onbekend";
 
-    // Stel juiste avatar afbeelding in
+    document.getElementById("title").textContent = `${profile}`;
+    document.getElementById("context").textContent = `Locatie: ${location}`;
     document.getElementById("avatarImage").src = profile.toLowerCase() + ".png";
   </script>
 </body>

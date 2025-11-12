@@ -26,3 +26,68 @@ body {
     background-color: #005ea2;
   }
   
+
+  .profiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .profile-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+  }
+  
+  .profile-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .profile-card img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .locations {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+  }
+  
+  .location-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    text-align: center;
+  }
+  
+  .location-card:hover {
+    transform: scale(1.1);
+  }
+  
+  .location-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 10px;
+  }
+  
+  #backBtn {
+    margin-top: 40px;
+    background: #444;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

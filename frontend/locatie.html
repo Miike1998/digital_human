@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <title>Kies een locatie</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <h1>Kies een omgeving voor je gesprek</h1>
+    <div class="locations">
+      <div class="location-card" onclick="chooseLocation('Cafe')">
+        <img src="../images/cafee.jpeg" alt="coffee">
+        <p>Cafe</p>
+      </div>
+      <div class="location-card" onclick="chooseLocation('Park')">
+        <img src="../images/picknick.jpg" alt="Picknick">
+        <p>Park</p>
+      </div>
+      <div class="location-card" onclick="chooseLocation('Strand')">
+        <img src="../images/beach.jpeg" alt="strand">
+        <p>Strand</p>
+      </div>
+    </div>
+    <button id="backBtn" onclick="goBack()">← Terug</button>
+  </div>
+
+  <script>
+    function chooseLocation(locationName) {
+      localStorage.setItem("selectedLocation", locationName);
+      window.location.href = "chat.html"; // 👉 stap 3
+    }
+
+    function goBack() {
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
