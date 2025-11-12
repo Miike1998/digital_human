@@ -2,20 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Digital Human</title>
+  <title>Digital Human - Kies profiel</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div id="container">
-    <h1>🎙️ Praat met je Digital Human</h1>
-    <div id="avatar">
-      <img src="avatar.png" alt="Digital Human">
+    <h1>Welkom! Kies een profiel</h1>
+    <div class="profiles">
+      <div class="profile-card" onclick="chooseProfile('Avatar1')">
+        <img src="../images/avatar1.jpg" alt="Avatar 1">
+        <p>Avatar 1</p>
+      </div>
+      <div class="profile-card" onclick="chooseProfile('Avatar2')">
+        <img src="../images/avatar1.jpg" alt="Avatar 2">
+        <p>Avatar 2</p>
+      </div>
+      <div class="profile-card" onclick="chooseProfile('Avatar3')">
+        <img src="../images/avatar1.jpg" alt="Avatar 3">
+        <p>Avatar 3</p>
+      </div>
     </div>
-    <button id="recordButton">🎤 Start gesprek</button>
-    <p id="transcript"></p>
-    <audio id="replyAudio" controls></audio>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function chooseProfile(profileName) {
+      // Sla gekozen profiel op in localStorage en ga naar chat pagina
+      localStorage.setItem("selectedProfile", profileName);
+      window.location.href = "chat.html";
+    }
+  </script>
 </body>
 </html>

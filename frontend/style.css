@@ -1,0 +1,28 @@
+body {
+    background: #101820;
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    text-align: center;
+    padding-top: 50px;
+  }
+  
+  #avatar img {
+    width: 200px;
+    border-radius: 50%;
+    margin: 20px;
+  }
+  
+  button {
+    background-color: #0078D7;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005ea2;
+  }
+  
