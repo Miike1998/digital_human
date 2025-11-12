@@ -8,8 +8,7 @@ app = Flask(__name__)
 CORS(app)  # maakt frontend-requests mogelijk
 
 
-
-@app.route("/", methods=["POST"])
+@app.route("/api/chat", methods=["POST"])
 def chat():
     try:
         audio = request.files.get("audio")
